@@ -50,11 +50,6 @@
             "capacite": 30,
             "equipements": ["tableau", "projecteur"]
         },
-        "Salle 201": {
-            "type": "standard",
-            "capacite": 35,
-            "equipements": ["tableau", "projecteur", "sono"]
-        },
         "Salle 202": {
             "type": "standard",
             "capacite": 28,
@@ -118,7 +113,7 @@
             "matieres_enseignees": ["Anglais", "Français"],
             "temps_plein": false,
             "contraintes": {
-                "jours_indisponibles": [],
+                "jours_indisponibles": ["Mercredi", "Vendredi"],
                 "heures_indisponibles": ["09:00-10:00"]
             }
         }
