@@ -1,0 +1,1115 @@
+{
+  "etablissement": {
+    "nom": "Collège Example",
+    "annee_scolaire": "2024-2025"
+  },
+  "date_generation": "2024-07-23",
+  "disponibilite_salles": {
+    "Lundi 09:00-10:00": {
+      "jour": "Lundi",
+      "heure": "09:00-10:00",
+      "salles_occupees": [
+        {
+          "nom": "Labo Chimie",
+          "type": "science_lab",
+          "capacite": 24,
+          "occupe_par": {
+            "groupe": "11e-B",
+            "matiere": "Physique",
+            "professeur": "Mme. Curie"
+          }
+        },
+        {
+          "nom": "Salle 102",
+          "type": "standard",
+          "capacite": 30,
+          "occupe_par": {
+            "groupe": "9e-A",
+            "matiere": "Français",
+            "professeur": "Mr. Hugo"
+          }
+        },
+        {
+          "nom": "Salle 202",
+          "type": "standard",
+          "capacite": 28,
+          "occupe_par": {
+            "groupe": "9e-B",
+            "matiere": "Maths",
+            "professeur": "Mme. Lovelace"
+          }
+        }
+      ],
+      "salles_libres": [
+        {
+          "nom": "Labo Info",
+          "type": "computer_lab",
+          "capacite": 20,
+          "equipements": [
+            "ordinateurs",
+            "projecteur",
+            "serveur"
+          ]
+        },
+        {
+          "nom": "Salle 101",
+          "type": "standard",
+          "capacite": 30,
+          "equipements": [
+            "tableau",
+            "projecteur"
+          ]
+        },
+        {
+          "nom": "Salle 201",
+          "type": "standard",
+          "capacite": 35,
+          "equipements": [
+            "tableau",
+            "projecteur",
+            "sono"
+          ]
+        }
+      ]
+    },
+    "Lundi 10:00-11:00": {
+      "jour": "Lundi",
+      "heure": "10:00-11:00",
+      "salles_occupees": [
+        {
+          "nom": "Salle 101",
+          "type": "standard",
+          "capacite": 30,
+          "occupe_par": {
+            "groupe": "9e-A",
+            "matiere": "Maths",
+            "professeur": "Mme. Lovelace"
+          }
+        },
+        {
+          "nom": "Salle 102",
+          "type": "standard",
+          "capacite": 30,
+          "occupe_par": {
+            "groupe": "11e-A",
+            "matiere": "Français",
+            "professeur": "Mr. Hugo"
+          }
+        },
+        {
+          "nom": "Salle 202",
+          "type": "standard",
+          "capacite": 28,
+          "occupe_par": {
+            "groupe": "11e-B",
+            "matiere": "Français",
+            "professeur": "Mr. Orwell"
+          }
+        }
+      ],
+      "salles_libres": [
+        {
+          "nom": "Labo Chimie",
+          "type": "science_lab",
+          "capacite": 24,
+          "equipements": [
+            "paillasses",
+            "hotte",
+            "materiel_chimie",
+            "douche_securite"
+          ]
+        },
+        {
+          "nom": "Labo Info",
+          "type": "computer_lab",
+          "capacite": 20,
+          "equipements": [
+            "ordinateurs",
+            "projecteur",
+            "serveur"
+          ]
+        },
+        {
+          "nom": "Salle 201",
+          "type": "standard",
+          "capacite": 35,
+          "equipements": [
+            "tableau",
+            "projecteur",
+            "sono"
+          ]
+        }
+      ]
+    },
+    "Lundi 14:00-15:00": {
+      "jour": "Lundi",
+      "heure": "14:00-15:00",
+      "salles_occupees": [
+        {
+          "nom": "Salle 201",
+          "type": "standard",
+          "capacite": 35,
+          "occupe_par": {
+            "groupe": "10e-A",
+            "matiere": "Maths",
+            "professeur": "Mr. Turing"
+          }
+        },
+        {
+          "nom": "Salle 202",
+          "type": "standard",
+          "capacite": 28,
+          "occupe_par": {
+            "groupe": "10e-B",
+            "matiere": "Français",
+            "professeur": "Mr. Hugo"
+          }
+        }
+      ],
+      "salles_libres": [
+        {
+          "nom": "Labo Chimie",
+          "type": "science_lab",
+          "capacite": 24,
+          "equipements": [
+            "paillasses",
+            "hotte",
+            "materiel_chimie",
+            "douche_securite"
+          ]
+        },
+        {
+          "nom": "Labo Info",
+          "type": "computer_lab",
+          "capacite": 20,
+          "equipements": [
+            "ordinateurs",
+            "projecteur",
+            "serveur"
+          ]
+        },
+        {
+          "nom": "Salle 101",
+          "type": "standard",
+          "capacite": 30,
+          "equipements": [
+            "tableau",
+            "projecteur"
+          ]
+        },
+        {
+          "nom": "Salle 102",
+          "type": "standard",
+          "capacite": 30,
+          "equipements": [
+            "tableau",
+            "projecteur"
+          ]
+        }
+      ]
+    },
+    "Lundi 15:00-16:00": {
+      "jour": "Lundi",
+      "heure": "15:00-16:00",
+      "salles_occupees": [
+        {
+          "nom": "Salle 101",
+          "type": "standard",
+          "capacite": 30,
+          "occupe_par": {
+            "groupe": "9e-A",
+            "matiere": "Anglais",
+            "professeur": "Mr. Orwell"
+          }
+        },
+        {
+          "nom": "Salle 102",
+          "type": "standard",
+          "capacite": 30,
+          "occupe_par": {
+            "groupe": "11e-B",
+            "matiere": "Histoire",
+            "professeur": "Mr. Hugo"
+          }
+        },
+        {
+          "nom": "Salle 201",
+          "type": "standard",
+          "capacite": 35,
+          "occupe_par": {
+            "groupe": "10e-B",
+            "matiere": "Maths",
+            "professeur": "Mme. Lovelace"
+          }
+        }
+      ],
+      "salles_libres": [
+        {
+          "nom": "Labo Chimie",
+          "type": "science_lab",
+          "capacite": 24,
+          "equipements": [
+            "paillasses",
+            "hotte",
+            "materiel_chimie",
+            "douche_securite"
+          ]
+        },
+        {
+          "nom": "Labo Info",
+          "type": "computer_lab",
+          "capacite": 20,
+          "equipements": [
+            "ordinateurs",
+            "projecteur",
+            "serveur"
+          ]
+        },
+        {
+          "nom": "Salle 202",
+          "type": "standard",
+          "capacite": 28,
+          "equipements": [
+            "tableau"
+          ]
+        }
+      ]
+    },
+    "Mardi 09:00-10:00": {
+      "jour": "Mardi",
+      "heure": "09:00-10:00",
+      "salles_occupees": [
+        {
+          "nom": "Salle 102",
+          "type": "standard",
+          "capacite": 30,
+          "occupe_par": {
+            "groupe": "9e-A",
+            "matiere": "Maths",
+            "professeur": "Mme. Lovelace"
+          }
+        },
+        {
+          "nom": "Salle 202",
+          "type": "standard",
+          "capacite": 28,
+          "occupe_par": {
+            "groupe": "10e-B",
+            "matiere": "Maths",
+            "professeur": "Mr. Turing"
+          }
+        }
+      ],
+      "salles_libres": [
+        {
+          "nom": "Labo Chimie",
+          "type": "science_lab",
+          "capacite": 24,
+          "equipements": [
+            "paillasses",
+            "hotte",
+            "materiel_chimie",
+            "douche_securite"
+          ]
+        },
+        {
+          "nom": "Labo Info",
+          "type": "computer_lab",
+          "capacite": 20,
+          "equipements": [
+            "ordinateurs",
+            "projecteur",
+            "serveur"
+          ]
+        },
+        {
+          "nom": "Salle 101",
+          "type": "standard",
+          "capacite": 30,
+          "equipements": [
+            "tableau",
+            "projecteur"
+          ]
+        },
+        {
+          "nom": "Salle 201",
+          "type": "standard",
+          "capacite": 35,
+          "equipements": [
+            "tableau",
+            "projecteur",
+            "sono"
+          ]
+        }
+      ]
+    },
+    "Mardi 10:00-11:00": {
+      "jour": "Mardi",
+      "heure": "10:00-11:00",
+      "salles_occupees": [
+        {
+          "nom": "Labo Info",
+          "type": "computer_lab",
+          "capacite": 20,
+          "occupe_par": {
+            "groupe": "9e-B",
+            "matiere": "Informatique",
+            "professeur": "Mr. Turing"
+          }
+        },
+        {
+          "nom": "Salle 101",
+          "type": "standard",
+          "capacite": 30,
+          "occupe_par": {
+            "groupe": "10e-A",
+            "matiere": "Maths",
+            "professeur": "Mme. Lovelace"
+          }
+        },
+        {
+          "nom": "Salle 201",
+          "type": "standard",
+          "capacite": 35,
+          "occupe_par": {
+            "groupe": "9e-A",
+            "matiere": "Français",
+            "professeur": "Mr. Orwell"
+          }
+        }
+      ],
+      "salles_libres": [
+        {
+          "nom": "Labo Chimie",
+          "type": "science_lab",
+          "capacite": 24,
+          "equipements": [
+            "paillasses",
+            "hotte",
+            "materiel_chimie",
+            "douche_securite"
+          ]
+        },
+        {
+          "nom": "Salle 102",
+          "type": "standard",
+          "capacite": 30,
+          "equipements": [
+            "tableau",
+            "projecteur"
+          ]
+        },
+        {
+          "nom": "Salle 202",
+          "type": "standard",
+          "capacite": 28,
+          "equipements": [
+            "tableau"
+          ]
+        }
+      ]
+    },
+    "Mardi 14:00-15:00": {
+      "jour": "Mardi",
+      "heure": "14:00-15:00",
+      "salles_occupees": [
+        {
+          "nom": "Labo Chimie",
+          "type": "science_lab",
+          "capacite": 24,
+          "occupe_par": {
+            "groupe": "10e-B",
+            "matiere": "Physique",
+            "professeur": "Mme. Curie"
+          }
+        },
+        {
+          "nom": "Salle 101",
+          "type": "standard",
+          "capacite": 30,
+          "occupe_par": {
+            "groupe": "11e-A",
+            "matiere": "Français",
+            "professeur": "Mr. Hugo"
+          }
+        },
+        {
+          "nom": "Salle 102",
+          "type": "standard",
+          "capacite": 30,
+          "occupe_par": {
+            "groupe": "9e-B",
+            "matiere": "Maths",
+            "professeur": "Mme. Lovelace"
+          }
+        }
+      ],
+      "salles_libres": [
+        {
+          "nom": "Labo Info",
+          "type": "computer_lab",
+          "capacite": 20,
+          "equipements": [
+            "ordinateurs",
+            "projecteur",
+            "serveur"
+          ]
+        },
+        {
+          "nom": "Salle 201",
+          "type": "standard",
+          "capacite": 35,
+          "equipements": [
+            "tableau",
+            "projecteur",
+            "sono"
+          ]
+        },
+        {
+          "nom": "Salle 202",
+          "type": "standard",
+          "capacite": 28,
+          "equipements": [
+            "tableau"
+          ]
+        }
+      ]
+    },
+    "Mardi 15:00-16:00": {
+      "jour": "Mardi",
+      "heure": "15:00-16:00",
+      "salles_occupees": [
+        {
+          "nom": "Labo Chimie",
+          "type": "science_lab",
+          "capacite": 24,
+          "occupe_par": {
+            "groupe": "10e-A",
+            "matiere": "Physique",
+            "professeur": "Mme. Curie"
+          }
+        },
+        {
+          "nom": "Salle 101",
+          "type": "standard",
+          "capacite": 30,
+          "occupe_par": {
+            "groupe": "9e-B",
+            "matiere": "Anglais",
+            "professeur": "Mr. Orwell"
+          }
+        },
+        {
+          "nom": "Salle 102",
+          "type": "standard",
+          "capacite": 30,
+          "occupe_par": {
+            "groupe": "11e-B",
+            "matiere": "Maths",
+            "professeur": "Mr. Turing"
+          }
+        },
+        {
+          "nom": "Salle 202",
+          "type": "standard",
+          "capacite": 28,
+          "occupe_par": {
+            "groupe": "10e-B",
+            "matiere": "Histoire",
+            "professeur": "Mr. Hugo"
+          }
+        }
+      ],
+      "salles_libres": [
+        {
+          "nom": "Labo Info",
+          "type": "computer_lab",
+          "capacite": 20,
+          "equipements": [
+            "ordinateurs",
+            "projecteur",
+            "serveur"
+          ]
+        },
+        {
+          "nom": "Salle 201",
+          "type": "standard",
+          "capacite": 35,
+          "equipements": [
+            "tableau",
+            "projecteur",
+            "sono"
+          ]
+        }
+      ]
+    },
+    "Mercredi 09:00-10:00": {
+      "jour": "Mercredi",
+      "heure": "09:00-10:00",
+      "salles_occupees": [
+        {
+          "nom": "Salle 102",
+          "type": "standard",
+          "capacite": 30,
+          "occupe_par": {
+            "groupe": "9e-B",
+            "matiere": "Français",
+            "professeur": "Mr. Hugo"
+          }
+        }
+      ],
+      "salles_libres": [
+        {
+          "nom": "Labo Chimie",
+          "type": "science_lab",
+          "capacite": 24,
+          "equipements": [
+            "paillasses",
+            "hotte",
+            "materiel_chimie",
+            "douche_securite"
+          ]
+        },
+        {
+          "nom": "Labo Info",
+          "type": "computer_lab",
+          "capacite": 20,
+          "equipements": [
+            "ordinateurs",
+            "projecteur",
+            "serveur"
+          ]
+        },
+        {
+          "nom": "Salle 101",
+          "type": "standard",
+          "capacite": 30,
+          "equipements": [
+            "tableau",
+            "projecteur"
+          ]
+        },
+        {
+          "nom": "Salle 201",
+          "type": "standard",
+          "capacite": 35,
+          "equipements": [
+            "tableau",
+            "projecteur",
+            "sono"
+          ]
+        },
+        {
+          "nom": "Salle 202",
+          "type": "standard",
+          "capacite": 28,
+          "equipements": [
+            "tableau"
+          ]
+        }
+      ]
+    },
+    "Mercredi 10:00-11:00": {
+      "jour": "Mercredi",
+      "heure": "10:00-11:00",
+      "salles_occupees": [
+        {
+          "nom": "Salle 101",
+          "type": "standard",
+          "capacite": 30,
+          "occupe_par": {
+            "groupe": "10e-A",
+            "matiere": "Français",
+            "professeur": "Mr. Hugo"
+          }
+        },
+        {
+          "nom": "Salle 202",
+          "type": "standard",
+          "capacite": 28,
+          "occupe_par": {
+            "groupe": "10e-B",
+            "matiere": "Français",
+            "professeur": "Mr. Orwell"
+          }
+        }
+      ],
+      "salles_libres": [
+        {
+          "nom": "Labo Chimie",
+          "type": "science_lab",
+          "capacite": 24,
+          "equipements": [
+            "paillasses",
+            "hotte",
+            "materiel_chimie",
+            "douche_securite"
+          ]
+        },
+        {
+          "nom": "Labo Info",
+          "type": "computer_lab",
+          "capacite": 20,
+          "equipements": [
+            "ordinateurs",
+            "projecteur",
+            "serveur"
+          ]
+        },
+        {
+          "nom": "Salle 102",
+          "type": "standard",
+          "capacite": 30,
+          "equipements": [
+            "tableau",
+            "projecteur"
+          ]
+        },
+        {
+          "nom": "Salle 201",
+          "type": "standard",
+          "capacite": 35,
+          "equipements": [
+            "tableau",
+            "projecteur",
+            "sono"
+          ]
+        }
+      ]
+    },
+    "Mercredi 14:00-15:00": {
+      "jour": "Mercredi",
+      "heure": "14:00-15:00",
+      "salles_occupees": [
+        {
+          "nom": "Labo Chimie",
+          "type": "science_lab",
+          "capacite": 24,
+          "occupe_par": {
+            "groupe": "10e-B",
+            "matiere": "Chimie",
+            "professeur": "Mme. Curie"
+          }
+        },
+        {
+          "nom": "Labo Info",
+          "type": "computer_lab",
+          "capacite": 20,
+          "occupe_par": {
+            "groupe": "9e-A",
+            "matiere": "Informatique",
+            "professeur": "Mr. Turing"
+          }
+        },
+        {
+          "nom": "Salle 102",
+          "type": "standard",
+          "capacite": 30,
+          "occupe_par": {
+            "groupe": "11e-B",
+            "matiere": "Français",
+            "professeur": "Mr. Hugo"
+          }
+        },
+        {
+          "nom": "Salle 201",
+          "type": "standard",
+          "capacite": 35,
+          "occupe_par": {
+            "groupe": "11e-A",
+            "matiere": "Anglais",
+            "professeur": "Mr. Orwell"
+          }
+        }
+      ],
+      "salles_libres": [
+        {
+          "nom": "Salle 101",
+          "type": "standard",
+          "capacite": 30,
+          "equipements": [
+            "tableau",
+            "projecteur"
+          ]
+        },
+        {
+          "nom": "Salle 202",
+          "type": "standard",
+          "capacite": 28,
+          "equipements": [
+            "tableau"
+          ]
+        }
+      ]
+    },
+    "Mercredi 15:00-16:00": {
+      "jour": "Mercredi",
+      "heure": "15:00-16:00",
+      "salles_occupees": [
+        {
+          "nom": "Labo Chimie",
+          "type": "science_lab",
+          "capacite": 24,
+          "occupe_par": {
+            "groupe": "11e-A",
+            "matiere": "Physique",
+            "professeur": "Mme. Curie"
+          }
+        },
+        {
+          "nom": "Salle 101",
+          "type": "standard",
+          "capacite": 30,
+          "occupe_par": {
+            "groupe": "9e-A",
+            "matiere": "Histoire",
+            "professeur": "Mr. Hugo"
+          }
+        },
+        {
+          "nom": "Salle 102",
+          "type": "standard",
+          "capacite": 30,
+          "occupe_par": {
+            "groupe": "11e-B",
+            "matiere": "Maths",
+            "professeur": "Mr. Turing"
+          }
+        },
+        {
+          "nom": "Salle 201",
+          "type": "standard",
+          "capacite": 35,
+          "occupe_par": {
+            "groupe": "10e-A",
+            "matiere": "Anglais",
+            "professeur": "Mr. Orwell"
+          }
+        }
+      ],
+      "salles_libres": [
+        {
+          "nom": "Labo Info",
+          "type": "computer_lab",
+          "capacite": 20,
+          "equipements": [
+            "ordinateurs",
+            "projecteur",
+            "serveur"
+          ]
+        },
+        {
+          "nom": "Salle 202",
+          "type": "standard",
+          "capacite": 28,
+          "equipements": [
+            "tableau"
+          ]
+        }
+      ]
+    },
+    "Jeudi 09:00-10:00": {
+      "jour": "Jeudi",
+      "heure": "09:00-10:00",
+      "salles_occupees": [
+        {
+          "nom": "Labo Chimie",
+          "type": "science_lab",
+          "capacite": 24,
+          "occupe_par": {
+            "groupe": "10e-A",
+            "matiere": "Chimie",
+            "professeur": "Mme. Curie"
+          }
+        },
+        {
+          "nom": "Salle 102",
+          "type": "standard",
+          "capacite": 30,
+          "occupe_par": {
+            "groupe": "11e-A",
+            "matiere": "Histoire",
+            "professeur": "Mr. Hugo"
+          }
+        }
+      ],
+      "salles_libres": [
+        {
+          "nom": "Labo Info",
+          "type": "computer_lab",
+          "capacite": 20,
+          "equipements": [
+            "ordinateurs",
+            "projecteur",
+            "serveur"
+          ]
+        },
+        {
+          "nom": "Salle 101",
+          "type": "standard",
+          "capacite": 30,
+          "equipements": [
+            "tableau",
+            "projecteur"
+          ]
+        },
+        {
+          "nom": "Salle 201",
+          "type": "standard",
+          "capacite": 35,
+          "equipements": [
+            "tableau",
+            "projecteur",
+            "sono"
+          ]
+        },
+        {
+          "nom": "Salle 202",
+          "type": "standard",
+          "capacite": 28,
+          "equipements": [
+            "tableau"
+          ]
+        }
+      ]
+    },
+    "Jeudi 10:00-11:00": {
+      "jour": "Jeudi",
+      "heure": "10:00-11:00",
+      "salles_occupees": [
+        {
+          "nom": "Salle 101",
+          "type": "standard",
+          "capacite": 30,
+          "occupe_par": {
+            "groupe": "9e-B",
+            "matiere": "Histoire",
+            "professeur": "Mr. Hugo"
+          }
+        },
+        {
+          "nom": "Salle 102",
+          "type": "standard",
+          "capacite": 30,
+          "occupe_par": {
+            "groupe": "11e-B",
+            "matiere": "Anglais",
+            "professeur": "Mr. Orwell"
+          }
+        },
+        {
+          "nom": "Salle 201",
+          "type": "standard",
+          "capacite": 35,
+          "occupe_par": {
+            "groupe": "11e-A",
+            "matiere": "Maths",
+            "professeur": "Mme. Lovelace"
+          }
+        }
+      ],
+      "salles_libres": [
+        {
+          "nom": "Labo Chimie",
+          "type": "science_lab",
+          "capacite": 24,
+          "equipements": [
+            "paillasses",
+            "hotte",
+            "materiel_chimie",
+            "douche_securite"
+          ]
+        },
+        {
+          "nom": "Labo Info",
+          "type": "computer_lab",
+          "capacite": 20,
+          "equipements": [
+            "ordinateurs",
+            "projecteur",
+            "serveur"
+          ]
+        },
+        {
+          "nom": "Salle 202",
+          "type": "standard",
+          "capacite": 28,
+          "equipements": [
+            "tableau"
+          ]
+        }
+      ]
+    },
+    "Jeudi 14:00-15:00": {
+      "jour": "Jeudi",
+      "heure": "14:00-15:00",
+      "salles_occupees": [
+        {
+          "nom": "Salle 101",
+          "type": "standard",
+          "capacite": 30,
+          "occupe_par": {
+            "groupe": "10e-A",
+            "matiere": "Français",
+            "professeur": "Mr. Hugo"
+          }
+        },
+        {
+          "nom": "Salle 102",
+          "type": "standard",
+          "capacite": 30,
+          "occupe_par": {
+            "groupe": "9e-B",
+            "matiere": "Français",
+            "professeur": "Mr. Orwell"
+          }
+        },
+        {
+          "nom": "Salle 201",
+          "type": "standard",
+          "capacite": 35,
+          "occupe_par": {
+            "groupe": "11e-A",
+            "matiere": "Maths",
+            "professeur": "Mme. Lovelace"
+          }
+        }
+      ],
+      "salles_libres": [
+        {
+          "nom": "Labo Chimie",
+          "type": "science_lab",
+          "capacite": 24,
+          "equipements": [
+            "paillasses",
+            "hotte",
+            "materiel_chimie",
+            "douche_securite"
+          ]
+        },
+        {
+          "nom": "Labo Info",
+          "type": "computer_lab",
+          "capacite": 20,
+          "equipements": [
+            "ordinateurs",
+            "projecteur",
+            "serveur"
+          ]
+        },
+        {
+          "nom": "Salle 202",
+          "type": "standard",
+          "capacite": 28,
+          "equipements": [
+            "tableau"
+          ]
+        }
+      ]
+    },
+    "Jeudi 15:00-16:00": {
+      "jour": "Jeudi",
+      "heure": "15:00-16:00",
+      "salles_occupees": [
+        {
+          "nom": "Salle 101",
+          "type": "standard",
+          "capacite": 30,
+          "occupe_par": {
+            "groupe": "10e-B",
+            "matiere": "Anglais",
+            "professeur": "Mr. Orwell"
+          }
+        },
+        {
+          "nom": "Salle 202",
+          "type": "standard",
+          "capacite": 28,
+          "occupe_par": {
+            "groupe": "10e-A",
+            "matiere": "Histoire",
+            "professeur": "Mr. Hugo"
+          }
+        }
+      ],
+      "salles_libres": [
+        {
+          "nom": "Labo Chimie",
+          "type": "science_lab",
+          "capacite": 24,
+          "equipements": [
+            "paillasses",
+            "hotte",
+            "materiel_chimie",
+            "douche_securite"
+          ]
+        },
+        {
+          "nom": "Labo Info",
+          "type": "computer_lab",
+          "capacite": 20,
+          "equipements": [
+            "ordinateurs",
+            "projecteur",
+            "serveur"
+          ]
+        },
+        {
+          "nom": "Salle 102",
+          "type": "standard",
+          "capacite": 30,
+          "equipements": [
+            "tableau",
+            "projecteur"
+          ]
+        },
+        {
+          "nom": "Salle 201",
+          "type": "standard",
+          "capacite": 35,
+          "equipements": [
+            "tableau",
+            "projecteur",
+            "sono"
+          ]
+        }
+      ]
+    }
+  },
+  "statistiques": {
+    "total_salles": 6,
+    "total_creneaux": 16,
+    "occupation_par_salle": {
+      "Salle 101": {
+        "occupations": 10,
+        "total_creneaux": 16,
+        "taux_occupation": 62.5
+      },
+      "Salle 102": {
+        "occupations": 12,
+        "total_creneaux": 16,
+        "taux_occupation": 75.0
+      },
+      "Salle 201": {
+        "occupations": 7,
+        "total_creneaux": 16,
+        "taux_occupation": 43.8
+      },
+      "Salle 202": {
+        "occupations": 7,
+        "total_creneaux": 16,
+        "taux_occupation": 43.8
+      },
+      "Labo Info": {
+        "occupations": 2,
+        "total_creneaux": 16,
+        "taux_occupation": 12.5
+      },
+      "Labo Chimie": {
+        "occupations": 6,
+        "total_creneaux": 16,
+        "taux_occupation": 37.5
+      }
+    }
+  }
+}

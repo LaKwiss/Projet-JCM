@@ -1,0 +1,205 @@
+{
+    "etablissement": {
+        "nom": "Collège Example",
+        "annee_scolaire": "2024-2025"
+    },
+    "planning": {
+        "jours": ["Lundi", "Mardi", "Mercredi", "Jeudi"],
+        "heures": ["09:00-10:00", "10:00-11:00", "14:00-15:00", "15:00-16:00"]
+    },
+    "groupes_eleves": [
+        {
+            "nom": "9e-A",
+            "niveau": "9e",
+            "effectif": 25
+        },
+        {
+            "nom": "9e-B",
+            "niveau": "9e",
+            "effectif": 23
+        },
+        {
+            "nom": "10e-A",
+            "niveau": "10e",
+            "effectif": 27
+        },
+        {
+            "nom": "10e-B",
+            "niveau": "10e",
+            "effectif": 24
+        },
+        {
+            "nom": "11e-A",
+            "niveau": "11e",
+            "effectif": 22
+        },
+        {
+            "nom": "11e-B",
+            "niveau": "11e",
+            "effectif": 26
+        }
+    ],
+    "salles": {
+        "Salle 101": {
+            "type": "standard",
+            "capacite": 30,
+            "equipements": ["tableau", "projecteur"]
+        },
+        "Salle 102": {
+            "type": "standard",
+            "capacite": 30,
+            "equipements": ["tableau", "projecteur"]
+        },
+        "Salle 201": {
+            "type": "standard",
+            "capacite": 35,
+            "equipements": ["tableau", "projecteur", "sono"]
+        },
+        "Salle 202": {
+            "type": "standard",
+            "capacite": 28,
+            "equipements": ["tableau"]
+        },
+        "Labo Info": {
+            "type": "computer_lab",
+            "capacite": 20,
+            "equipements": ["ordinateurs", "projecteur", "serveur"]
+        },
+        "Labo Chimie": {
+            "type": "science_lab",
+            "capacite": 24,
+            "equipements": [
+                "paillasses",
+                "hotte",
+                "materiel_chimie",
+                "douche_securite"
+            ]
+        }
+    },
+    "professeurs": {
+        "Mr. Turing": {
+            "prenom": "Alan",
+            "matieres_enseignees": ["Informatique", "Maths"],
+            "temps_plein": true,
+            "contraintes": {
+                "jours_indisponibles": [],
+                "heures_indisponibles": []
+            }
+        },
+        "Mme. Curie": {
+            "prenom": "Marie",
+            "matieres_enseignees": ["Physique", "Chimie"],
+            "temps_plein": true,
+            "contraintes": {
+                "jours_indisponibles": [],
+                "heures_indisponibles": []
+            }
+        },
+        "Mr. Hugo": {
+            "prenom": "Victor",
+            "matieres_enseignees": ["Français", "Histoire"],
+            "temps_plein": true,
+            "contraintes": {
+                "jours_indisponibles": [],
+                "heures_indisponibles": []
+            }
+        },
+        "Mme. Lovelace": {
+            "prenom": "Ada",
+            "matieres_enseignees": ["Maths", "Physique"],
+            "temps_plein": true,
+            "contraintes": {
+                "jours_indisponibles": ["Mercredi"],
+                "heures_indisponibles": []
+            }
+        },
+        "Mr. Orwell": {
+            "prenom": "George",
+            "matieres_enseignees": ["Anglais", "Français"],
+            "temps_plein": false,
+            "contraintes": {
+                "jours_indisponibles": [],
+                "heures_indisponibles": ["09:00-10:00"]
+            }
+        }
+    },
+    "matieres": {
+        "Maths": {
+            "nom_complet": "Mathématiques",
+            "salle_requise": "standard",
+            "duree_cours": 60,
+            "emoji": "📐"
+        },
+        "Physique": {
+            "nom_complet": "Physique",
+            "salle_requise": "science_lab",
+            "duree_cours": 60,
+            "emoji": "⚛️"
+        },
+        "Chimie": {
+            "nom_complet": "Chimie",
+            "salle_requise": "science_lab",
+            "duree_cours": 60,
+            "emoji": "🧪"
+        },
+        "Français": {
+            "nom_complet": "Français",
+            "salle_requise": "standard",
+            "duree_cours": 60,
+            "emoji": "📚"
+        },
+        "Histoire": {
+            "nom_complet": "Histoire",
+            "salle_requise": "standard",
+            "duree_cours": 60,
+            "emoji": "🏛️"
+        },
+        "Anglais": {
+            "nom_complet": "Anglais",
+            "salle_requise": "standard",
+            "duree_cours": 60,
+            "emoji": "🇬🇧"
+        },
+        "Informatique": {
+            "nom_complet": "Informatique",
+            "salle_requise": "computer_lab",
+            "duree_cours": 60,
+            "emoji": "💻"
+        }
+    },
+    "curriculum": {
+        "9e": {
+            "matieres_obligatoires": {
+                "Maths": 2,
+                "Français": 2,
+                "Anglais": 1,
+                "Histoire": 1,
+                "Informatique": 1
+            }
+        },
+        "10e": {
+            "matieres_obligatoires": {
+                "Maths": 2,
+                "Français": 2,
+                "Anglais": 1,
+                "Histoire": 1,
+                "Physique": 1,
+                "Chimie": 1
+            }
+        },
+        "11e": {
+            "matieres_obligatoires": {
+                "Maths": 2,
+                "Français": 2,
+                "Anglais": 1,
+                "Histoire": 1,
+                "Physique": 1
+            }
+        }
+    },
+    "parametres_solveur": {
+        "temps_max_seconds": 120,
+        "log_progression": true,
+        "strategie": "default"
+    }
+}
