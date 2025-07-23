@@ -68,6 +68,39 @@ def validate_config(config):
         if matiere_info["salle_requise"] not in types_salles_disponibles:
             errors.append(f"La matière '{matiere}' requiert une salle de type '{matiere_info['salle_requise']}' mais aucune n'est disponible")
     
+    # Vérifier que les jours/heures autorisés par niveau existent dans le planning global
+    jours_planning = set(config["planning"]["jours"])
+    heures_planning = set(config["planning"]["heures"])
+    
+    for niveau, curriculum in config["curriculum"].items():
+        # Vérifier les jours autorisés
+        if "jours_autorises" in curriculum:
+            jours_autorises = set(curriculum["jours_autorises"])
+            jours_invalides = jours_autorises - jours_planning
+            if jours_invalides:
+                errors.append(f"Le niveau {niveau} a des jours autorisés invalides: {list(jours_invalides)}")
+        
+        # Vérifier les heures autorisées
+        if "heures_autorisees" in curriculum:
+            heures_autorisees = set(curriculum["heures_autorisees"])
+            heures_invalides = heures_autorisees - heures_planning
+            if heures_invalides:
+                errors.append(f"Le niveau {niveau} a des heures autorisées invalides: {list(heures_invalides)}")
+    
+    # Vérifier la faisabilité: assez de créneaux pour chaque niveau
+    for niveau, curriculum in config["curriculum"].items():
+        jours_autorises = curriculum.get("jours_autorises", config["planning"]["jours"])
+        heures_autorisees = curriculum.get("heures_autorisees", config["planning"]["heures"])
+        creneaux_disponibles = len(jours_autorises) * len(heures_autorisees)
+        
+        total_cours_niveau = sum(curriculum["matieres_obligatoires"].values())
+        groupes_niveau = [g for g in config["groupes_eleves"] if g["niveau"] == niveau]
+        
+        if groupes_niveau:
+            cours_par_groupe = total_cours_niveau
+            if creneaux_disponibles < cours_par_groupe:
+                errors.append(f"Niveau {niveau}: {cours_par_groupe} cours par groupe mais seulement {creneaux_disponibles} créneaux disponibles")
+    
     return errors
 
 def create_schedule_from_config(config_path="schedule_config.json"):
@@ -109,7 +142,21 @@ def create_schedule_from_config(config_path="schedule_config.json"):
     print(f"   - {len(cours_a_planifier)} cours à planifier")
     print(f"   - {len(liste_professeurs)} professeurs")
     print(f"   - {len(liste_salles)} salles")
-    print(f"   - {len(jours) * len(heures)} créneaux par jour")
+    print(f"   - {len(jours) * len(heures)} créneaux au total")
+    
+    # Afficher les contraintes par niveau
+    print(f"\n📅 Contraintes horaires par niveau:")
+    for niveau, curriculum in config["curriculum"].items():
+        jours_autorises = curriculum.get("jours_autorises", jours)
+        heures_autorisees = curriculum.get("heures_autorisees", heures)
+        creneaux_niveau = len(jours_autorises) * len(heures_autorisees)
+        total_cours = sum(curriculum["matieres_obligatoires"].values())
+        
+        print(f"   - {niveau}: {creneaux_niveau} créneaux disponibles, {total_cours} cours par groupe")
+        if len(jours_autorises) < len(jours):
+            print(f"     └─ Jours autorisés: {', '.join(jours_autorises)}")
+        if len(heures_autorisees) < len(heures):
+            print(f"     └─ Heures autorisées: {', '.join(heures_autorisees)}")
 
     # ------------------
     # MODÈLE ET VARIABLES
@@ -118,6 +165,18 @@ def create_schedule_from_config(config_path="schedule_config.json"):
     assignments = {}
     
     for (groupe, matiere, cours_id) in cours_a_planifier:
+        # Récupérer le niveau du groupe pour les contraintes horaires
+        niveau_groupe = None
+        for groupe_info in config["groupes_eleves"]:
+            if groupe_info["nom"] == groupe:
+                niveau_groupe = groupe_info["niveau"]
+                break
+        
+        # Récupérer les contraintes horaires du niveau
+        curriculum_niveau = config["curriculum"].get(niveau_groupe, {})
+        jours_autorises = curriculum_niveau.get("jours_autorises", jours)
+        heures_autorisees = curriculum_niveau.get("heures_autorisees", heures)
+        
         for prof in liste_professeurs:
             # Vérifier que le prof peut enseigner cette matière
             if matiere not in professeurs[prof]:
@@ -133,11 +192,19 @@ def create_schedule_from_config(config_path="schedule_config.json"):
                     continue
                     
                 for jour in jours:
+                    # Vérifier si ce jour est autorisé pour le niveau du groupe
+                    if jour not in jours_autorises:
+                        continue
+                        
                     # Vérifier si le professeur est disponible ce jour
                     if jour in prof_info["contraintes"]["jours_indisponibles"]:
                         continue
                         
                     for heure in heures:
+                        # Vérifier si cette heure est autorisée pour le niveau du groupe
+                        if heure not in heures_autorisees:
+                            continue
+                            
                         # Vérifier si le professeur est disponible à cette heure
                         if heure in prof_info["contraintes"]["heures_indisponibles"]:
                             continue
@@ -208,13 +275,38 @@ def create_schedule_from_config(config_path="schedule_config.json"):
         print(f"Nombre de conflits: {solver.NumConflicts()}")
         print(f"Nombre de branches: {solver.NumBranches()}")
         
-        # Analyse des matières problématiques
-        print("\n--- Analyse des contraintes ---")
-        for matiere in set(c[1] for c in cours_a_planifier):
-            profs_competents = [p for p in professeurs if matiere in professeurs[p]]
-            cours_matiere = len([c for c in cours_a_planifier if c[1] == matiere])
-            salles_compatibles = [s for s in salles if salles[s]["type"] == infos_matieres[matiere]["salle_requise"]]
-            print(f"{matiere}: {cours_matiere} cours, {len(profs_competents)} prof(s), {len(salles_compatibles)} salle(s)")
+        # Analyse des matières problématiques par niveau
+        print("\n--- Analyse des contraintes par niveau ---")
+        for niveau, curriculum_info in config["curriculum"].items():
+            print(f"\n🎓 Niveau {niveau}:")
+            jours_autorises = curriculum_info.get("jours_autorises", jours)
+            heures_autorisees = curriculum_info.get("heures_autorisees", heures)
+            creneaux_disponibles = len(jours_autorises) * len(heures_autorisees)
+            
+            print(f"   Créneaux disponibles: {creneaux_disponibles}")
+            print(f"   Jours autorisés: {', '.join(jours_autorises)}")
+            print(f"   Heures autorisées: {', '.join(heures_autorisees)}")
+            
+            cours_niveau = [c for c in cours_a_planifier 
+                           if any(g["nom"] == c[0] and g["niveau"] == niveau for g in config["groupes_eleves"])]
+            
+            if cours_niveau:
+                matieres_niveau = set(c[1] for c in cours_niveau)
+                for matiere in matieres_niveau:
+                    profs_competents = [p for p in professeurs if matiere in professeurs[p]]
+                    cours_matiere = len([c for c in cours_niveau if c[1] == matiere])
+                    salles_compatibles = [s for s in salles if salles[s]["type"] == infos_matieres[matiere]["salle_requise"]]
+                    
+                    # Vérifier les professeurs disponibles sur les créneaux du niveau
+                    profs_disponibles = []
+                    for prof in profs_competents:
+                        prof_info = config["professeurs"][prof]
+                        jours_prof_ok = [j for j in jours_autorises if j not in prof_info["contraintes"]["jours_indisponibles"]]
+                        heures_prof_ok = [h for h in heures_autorisees if h not in prof_info["contraintes"]["heures_indisponibles"]]
+                        if jours_prof_ok and heures_prof_ok:
+                            profs_disponibles.append(f"{prof}({len(jours_prof_ok)}j×{len(heures_prof_ok)}h)")
+                    
+                    print(f"   {matiere}: {cours_matiere} cours, {len(profs_competents)} prof(s) → {len(profs_disponibles)} disponible(s): {', '.join(profs_disponibles) if profs_disponibles else 'AUCUN!'}")
         
         return
 

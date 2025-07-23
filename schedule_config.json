@@ -175,7 +175,15 @@
                 "Anglais": 1,
                 "Histoire": 1,
                 "Informatique": 1
-            }
+            },
+            "jours_autorises": ["Lundi", "Mardi", "Mercredi"],
+            "heures_autorisees": [
+                "09:00-10:00",
+                "10:00-11:00",
+                "14:00-15:00",
+                "15:00-16:00"
+            ],
+            "description": "Classes de 9e année - emploi du temps allégé"
         },
         "10e": {
             "matieres_obligatoires": {
@@ -185,7 +193,15 @@
                 "Histoire": 1,
                 "Physique": 1,
                 "Chimie": 1
-            }
+            },
+            "jours_autorises": ["Mardi", "Mercredi", "Jeudi"],
+            "heures_autorisees": [
+                "09:00-10:00",
+                "10:00-11:00",
+                "14:00-15:00",
+                "15:00-16:00"
+            ],
+            "description": "Classes de 10e année - programme scientifique renforcé"
         },
         "11e": {
             "matieres_obligatoires": {
@@ -194,7 +210,15 @@
                 "Anglais": 1,
                 "Histoire": 1,
                 "Physique": 1
-            }
+            },
+            "jours_autorises": ["Lundi", "Mercredi", "Jeudi"],
+            "heures_autorisees": [
+                "09:00-10:00",
+                "10:00-11:00",
+                "14:00-15:00",
+                "15:00-16:00"
+            ],
+            "description": "Classes de 11e année - préparation examens"
         }
     },
     "parametres_solveur": {
